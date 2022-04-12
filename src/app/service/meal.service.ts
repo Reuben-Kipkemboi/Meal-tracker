@@ -1,19 +1,27 @@
 import { Injectable } from '@angular/core';
-import { Meals } from '../meals';
+import { Meal } from '../meals';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MealService {
-  getmeals(): Meals[] {
-    throw new Error('Method not implemented.');
-  }
-  meals : Meals[]=[
-  new Meals('ugali nyama','46car','lorem',),
-  new Meals('ugali nyama','46car','lorem',),
-  new Meals('ugali nyama','46car','lorem',),
-  new Meals('ugali nyama','46car','lorem',),
+  
+  meals : Meal[]=[
+  new Meal('ugali nyama',200,'lorem',),
+  new Meal('ugali nyama',600,'lorem',),
+  new Meal('ugali nyama',700,'lorem',),
+  new Meal('ugali nyama',400,'lorem',),
   ]
+  
+  
 
   constructor() { }
+  
+  getMeals(){
+    return this.meals;
+  }
+  addMeal(meal:Meal){
+    this.meals.push(meal)
+  }
+
 }

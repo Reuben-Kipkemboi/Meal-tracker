@@ -1,0 +1,24 @@
+<div class="container">
+    <app-form></app-form>
+</div>
+<div class="container py-5">
+    <h3 class="text-center mb-4">MEAL TABLE</h3>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead class="thead bg-dark text-white">
+                <tr class="tr">
+                    <th>Name</th>
+                    <th>Calories</th>
+                    <th>Detail</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let meal of meals'>
+                    <td> {{meal.name}} </td>
+                    <td> {{meal.calories}} </td>
+                    <td> {{meal.detail}} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

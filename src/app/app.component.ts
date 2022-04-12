@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { Meals } from './meals';
-import { MealService } from './service/meal.service';
+
 
 @Component({
   selector: 'app-root',
@@ -8,14 +7,6 @@ import { MealService } from './service/meal.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  meals:Meals[];
-
-  getmeals(){
-    return Meals
-  }
-
-    constructor(mealsService:MealService) {
-      this.meals = mealsService.getmeals()
-    }
+  
   title = 'meal-tracker';
 }

@@ -1,3 +1,3 @@
-export class Meals {
-    constructor(public name:string,public calories:string,public detail:string){}
+export class Meal {
+    constructor(public name:string,public calories:number,public detail:string){}
 }
