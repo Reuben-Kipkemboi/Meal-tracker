@@ -1,24 +1,32 @@
-<div class="container">
-    <app-form></app-form>
-</div>
-<div class="container py-5">
-    <h3 class="text-center mb-4">MEAL TABLE</h3>
-    <div class="table-responsive">
-        <table class="table table-striped">
-            <thead class="thead bg-dark text-white">
-                <tr class="tr">
-                    <th>Name</th>
-                    <th>Calories</th>
-                    <th>Detail</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor='let meal of meals'>
-                    <td> {{meal.name}} </td>
-                    <td> {{meal.calories}} </td>
-                    <td> {{meal.detail}} </td>
-                </tr>
-            </tbody>
-        </table>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+      <app-form></app-form>
+
     </div>
+    <div class="col-md-8">
+      <h3 class="text-center mt-4">MEAL TABLE</h3>
+      <div class="table-responsive">
+        <table class="table table-striped table-bordered table-hover">
+          <thead class="thead bg-dark text-white">
+            <tr class="tr">
+              <th>Name</th>
+              <th>Calories</th>
+              <th>Detail</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor='let meal of meals'>
+              <td> {{meal.name}} </td>
+              <td> {{meal.calories}} </td>
+              <td> {{meal.detail}} </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <button type="submit" (click) = 'aboveHalf(meals)' class="btn btn-outline-info btn-lg  fw-bold">Calories Over 500</button>
+      <button type="submit" class="btn btn-outline-success btn-lg ms-4 fw-bold">Calories Below 500</button>
+    </div>
+  </div>
 </div>

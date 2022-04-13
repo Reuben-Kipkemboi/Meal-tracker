@@ -15,4 +15,9 @@ export class MealComponent implements OnInit {
     this.meals=this.mealService.getMeals();
   }
 
+  aboveHalf(meal:any){
+    this.mealService.aboveHalf(meal);
+    
 }
+}
+
