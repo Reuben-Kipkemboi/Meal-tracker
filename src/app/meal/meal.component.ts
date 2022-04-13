@@ -11,13 +11,21 @@ export class MealComponent implements OnInit {
   meals: Meal[] = [];
   constructor(private mealService:MealService) { }
  
-  ngOnInit(): void {
-    this.meals=this.mealService.getMeals();
-  }
-
-  aboveHalf(meal:any){
-    this.mealService.aboveHalf(meal);
+  ngOnInit(): void{
+    this.meals=this.mealService.getMeals(); 
     
+  }
+  aboveHalf() {
+    const caloriesAboveHalf:any[] = [];
+    for (let i = 0; i < this.meals.length; i++) {
+      if (this.meals[i].calories > 500) {
+        caloriesAboveHalf.push(this.meals[i]);
+      }
+    }
+    // console.log(caloriesAboveHalf);
+    this.meals= caloriesAboveHalf;
+      
+   }     
 }
-}
+
 
